@@ -1,0 +1,26 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: lightgray;
+  margin: 0 auto;
+  width: 25rem;
+}
+
+.img{
+  background: darkgray;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin: 0.5rem;
+  display: block;
+}
+
+.info{
+  display: inline;
+
+  h2, h3{
+    margin: 0.5rem 0.1rem;
+  }
+}
