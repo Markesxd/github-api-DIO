@@ -1,15 +1,21 @@
 import style from './style.module.scss';
+import {Status} from '..';
+import {useUserContext} from '../../context/userContext.js';
 
 const Card = () => {
+
+  const {user} = useUserContext();
+
  return(
    <div className={style.container}>
-    <span className={style.img} />
+    <img className={style.img} src={user.avatar} alt="Profile"/>
     <div className={style.info}>
-      <h2>Rafael Campos</h2>
-      <h3>Username: Markesxd</h3>
-      <h3>Company: @currentlyunemployed</h3>
-      <h3>Location: Brazil</h3>
-      <h3>Blog: www.notexistent.nay</h3>
+      <h2>{user.name}</h2>
+      <h3><strong>Username:</strong> <a href={user.url} target="_blank">{user.login}</a></h3>
+      <h3><strong>Company:</strong> {user.company}</h3>
+      <h3><strong>Location:</strong> {user.location}</h3>
+      <h3><strong>Blog:</strong> <a href={user.blog}>{user.blog}</a></h3>
+      <Status/>
     </div>
    </div>
  )

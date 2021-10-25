@@ -1,17 +1,17 @@
 .container{
   display: flex;
   flex-direction: row;
+  font-family: sans-serif;
   align-items: center;
   justify-content: space-between;
-  background: lightgray;
   margin: 0 auto;
-  width: 25rem;
+  width: 33rem;
 }
 
 .img{
   background: darkgray;
-  height: 100px;
-  width: 100px;
+  height: 190px;
+  width: 190px;
   border-radius: 100%;
   margin: 0.5rem;
   display: block;
@@ -21,6 +21,15 @@
   display: inline;
 
   h2, h3{
-    margin: 0.5rem 0.1rem;
+    margin: 0.4rem 0;
+    font-weight: normal;
+
+    strong{
+      font-weight: bolder;
+    }
+
+    a{
+      text-decoration: none;
+    }
   }
 }
